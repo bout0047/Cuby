@@ -19,6 +19,8 @@
     "svelte": "^3.55.0"
   },
   "dependencies": {
+    "express": "^4.18.2",
+    "iconify-icon": "^1.0.8",
     "sirv-cli": "^2.0.0"
   }
 }
