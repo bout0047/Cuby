@@ -1,0 +1,9 @@
+name: on-commit-push
+run-name: ${{github.actor }} is pushing code
+jobs: 
+  Pushing-Code:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "pushing commit"
+      - uses: actions/checkout@v3
+      - run: npm ci
