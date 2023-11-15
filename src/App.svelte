@@ -2,6 +2,8 @@
 	export let name;
 	import SettingsMenu from "./SettingsMenu.svelte";
 	import "@fortawesome/fontawesome-free/js/all.js";
+	import {Router, Route, Link} from "svelte-routing";
+	import Profile from "./Profile.svelte";
 </script>
 
 <SettingsMenu />
@@ -13,7 +15,7 @@
 	</div>
 
 	<div class="profile">
-		<a href="">profile</a><br />
+		<a href={Profile}>profile</a><br />
 		<i class="fa-regular fa-address-card icons" />
 	</div>
 	<div class="top">
@@ -36,7 +38,6 @@
 		</div>
 	</div>
 </main>
-
 <style>
 	main {
 		padding: 1em;
