@@ -1,10 +1,11 @@
 <script>
+    import TopNav from "./TopNav.svelte";
 	export let name;
-	import SettingsMenu from "./SettingsMenu.svelte";
 	import "@fortawesome/fontawesome-free/js/all.js";
+	import "img/calender.png"
 </script>
 
-<SettingsMenu />
+<TopNav />
 <main>
 	<div id="cubyconnect" class="cubyconnect">
 		<a href="cubyconnect"
@@ -14,25 +15,26 @@
 
 	<div class="profile">
 		<a href="Profile.svelte">profile</a><br />
-		<i class="fa-regular fa-address-card icons" />
+		<img src="img/profile.png" alt="profile"/>
 	</div>
 	<div class="top">
 		<div class="events">
-			<a href="Events.svelte">events</a><br /><i class="fa-solid fa-users icons" />
+			<a href="Events.svelte">events</a><br />
+			<img src="img/events.png" alt="events"/>
 		</div>
 		<div class="calender">
 			<a href="Calender.svelte">calender</a><br />
-			<i class="fa-regular fa-calendar-days icons" />
+			<img src="img/calender.png" alt="calender"/>
 		</div>
 	</div>
 	<div class="bottom">
 		<div class="stats">
-			<a href="Stats.svelte">stats</a><br /><i class="fa-solid fa-chart-line icons" />
+			<a href="Stats.svelte">stats</a><br />
+			<img src="img/stats.png" alt="stats"/>
 		</div>
 		<div class="self-help">
-			<a href="Self-help.svelte">self-help</a><br /><i
-				class="fa-solid fa-circle-info icons"
-			/>
+			<a href="Self-help.svelte">self-help</a><br />
+			<img src="img/self help.png" alt="self help"/>
 		</div>
 	</div>
 </main>
@@ -57,63 +59,72 @@
 	}
 	:global(body) {
 		background-color: #87abab;
+		overflow-x: none;
 	}
 
 	.profile {
 		background-color: dimgray;
 		text-align: center;
 		margin-bottom: 2cm;
-		margin-left: 30%;
-		margin-right: 30%;
+		margin-left: 25%;
+		margin-right: 25%;
 		margin-top: 1.5cm;
+		border-radius: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding: 10px;
 	}
 
 	.calender {
 		background-color: dimgray;
 		text-align: center;
-		margin-left: 60%; 
-		padding: 5px;
+		padding: 10px;
 		display: inline-block;
+		border-radius: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding: 10px;
+		margin-left: 10%;
 	}
 
 	.events {
 		background-color: dimgray;
 		text-align: center;
-		padding: 5px;
+		padding: 10px;
 		display: inline-block;
+		border-radius: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding: 10px;		
 	}
 
 	.stats {
 		background-color: dimgray;
 		text-align: center;
-		margin-right: 65%;
+		border-radius: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
 		margin-top: 1cm;
-		padding: 10px;
 		display: inline-block;
+		padding: 10px;
 	}
 
 	.self-help {
 		background-color: dimgray;
 		text-align: center;
-		padding: 5px;
+		padding: 10px;
 		display: inline-block;
+		border-radius: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
 	.cubyconnect {
 		background-color: darkblue;
 	}
 
-	.icons {
-		font-size: xx-large;
-	}
-
-	.top {
-		font-size: 20px;
-		padding: 20px;
-	}
-
-	.bottom {
-		font-size: 20px;
-		padding: 20px;
+	img {
+		width: 3.3cm;
+		height: 3.3cm;
 	}
 </style>
