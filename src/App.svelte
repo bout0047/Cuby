@@ -16,7 +16,7 @@
 		<a href="">profile</a><br />
 		<i class="fa-regular fa-address-card icons" />
 	</div>
-	<div class="top>">
+	<div class="top">
 		<div class="events">
 			<a href="">events</a><br /><i class="fa-solid fa-users icons" />
 		</div>
@@ -71,26 +71,29 @@
 	.calender {
 		background-color: dimgray;
 		text-align: center;
-		/* margin-left: 70%;
-		margin-bottom: 1cm; */
+		margin-left: 70%;
+		margin-bottom: 1cm; 
+		display: inline-block;
 	}
 
 	.events {
 		background-color: dimgray;
 		text-align: center;
-		/* margin-right: 70%; */
+		
+		display: inline-block;
 	}
 
 	.stats {
 		background-color: dimgray;
 		text-align: center;
-		margin-right: 70%;
+		margin-right: 60%;
+		display: inline-block;
 	}
 
 	.self-help {
 		background-color: dimgray;
 		text-align: center;
-		margin-left: 70%;
+		display: inline-block;
 	}
 
 	.cubyconnect {
@@ -102,7 +105,11 @@
 	}
 
 	.top {
-		display: inline-block;
+		font-size: 20px;
+		padding: 20px;
+	}
+
+	.bottom {
 		font-size: 20px;
 		padding: 20px;
 	}

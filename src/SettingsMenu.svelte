@@ -1,5 +1,5 @@
 <script>
-    console.log('hekp');
+
 </script>
 <main>
     <div class="top-right">
