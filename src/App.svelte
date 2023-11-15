@@ -18,7 +18,7 @@
 	</div>
 	<div class="top">
 		<div class="events">
-			<a href="">events</a><br /><i class="fa-solid fa-users icons" />
+			<a>events</a><br /><i class="fa-solid fa-users icons" />
 		</div>
 		<div class="calender">
 			<a href="">calender</a><br />
