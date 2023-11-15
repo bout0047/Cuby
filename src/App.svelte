@@ -8,29 +8,29 @@
 <main>
 	<div id="cubyconnect" class="cubyconnect">
 		<a href="cubyconnect"
-			><h1>Hello {name}! <i class="fa-solid fa-cube" /></h1></a
-		>
+			><h1>Hello {name}! <i class="fa-solid fa-cube" /></h1></a>
+			<h1>Connect to cuby here!</h1>
 	</div>
 
 	<div class="profile">
-		<a href="">profile</a><br />
+		<a href="Profile.svelte">profile</a><br />
 		<i class="fa-regular fa-address-card icons" />
 	</div>
 	<div class="top">
 		<div class="events">
-			<a>events</a><br /><i class="fa-solid fa-users icons" />
+			<a href="Events.svelte">events</a><br /><i class="fa-solid fa-users icons" />
 		</div>
 		<div class="calender">
-			<a href="">calender</a><br />
+			<a href="Calender.svelte">calender</a><br />
 			<i class="fa-regular fa-calendar-days icons" />
 		</div>
 	</div>
 	<div class="bottom">
 		<div class="stats">
-			<a href="">stats</a><br /><i class="fa-solid fa-chart-line icons" />
+			<a href="Stats.svelte">stats</a><br /><i class="fa-solid fa-chart-line icons" />
 		</div>
 		<div class="self-help">
-			<a href="">self-help center</a><br /><i
+			<a href="Self-help.svelte">self-help</a><br /><i
 				class="fa-solid fa-circle-info icons"
 			/>
 		</div>
@@ -71,28 +71,31 @@
 	.calender {
 		background-color: dimgray;
 		text-align: center;
-		margin-left: 70%;
-		margin-bottom: 1cm; 
+		margin-left: 60%; 
+		padding: 5px;
 		display: inline-block;
 	}
 
 	.events {
 		background-color: dimgray;
 		text-align: center;
-		
+		padding: 5px;
 		display: inline-block;
 	}
 
 	.stats {
 		background-color: dimgray;
 		text-align: center;
-		margin-right: 60%;
+		margin-right: 65%;
+		margin-top: 1cm;
+		padding: 10px;
 		display: inline-block;
 	}
 
 	.self-help {
 		background-color: dimgray;
 		text-align: center;
+		padding: 5px;
 		display: inline-block;
 	}
 
