@@ -1,130 +1,113 @@
 <script>
     import TopNav from "./TopNav.svelte";
-	export let name;
-	import "@fortawesome/fontawesome-free/js/all.js";
-	import "img/calender.png"
+    export let name;
+    import "@fortawesome/fontawesome-free/js/all.js";
 </script>
 
 <TopNav />
-<main>
-	<div id="cubyconnect" class="cubyconnect">
-		<a href="cubyconnect"
-			><h1>Hello {name}! <i class="fa-solid fa-cube" /></h1></a>
-			<h1>Connect to cuby here!</h1>
-	</div>
 
-	<div class="profile">
-		<a href="Profile.svelte">profile</a><br />
-		<img src="img/profile.png" alt="profile"/>
-	</div>
-	<div class="top">
-		<div class="events">
-			<a href="Events.svelte">events</a><br />
-			<img src="img/events.png" alt="events"/>
-		</div>
-		<div class="calender">
-			<a href="Calender.svelte">calender</a><br />
-			<img src="img/calender.png" alt="calender"/>
-		</div>
-	</div>
-	<div class="bottom">
-		<div class="stats">
-			<a href="Stats.svelte">stats</a><br />
-			<img src="img/stats.png" alt="stats"/>
-		</div>
-		<div class="self-help">
-			<a href="Self-help.svelte">self-help</a><br />
-			<img src="img/self help.png" alt="self help"/>
-		</div>
-	</div>
+<main>
+    <div id="cubyconnect" class="cubyconnect">
+        <a href="cubyconnect">
+            <h1>Hello {name}! <i class="fa-solid fa-cube"></i></h1>
+        </a>
+        <h2>Connect to cuby here!</h2>
+    </div>
+
+    <div class="icon-container">
+        <div class="icon-row">
+            <div class="icon profile">
+                <a href="Profile.svelte">profile</a><br />
+                <img src="img/profile.png" alt="profile"/>
+            </div>
+        </div>
+        <div class="icon-row multi-icons">
+            <div class="icon events">
+                <a href="Events.svelte">events</a><br />
+                <img src="img/events.png" alt="events"/>
+            </div>
+            <div class="icon calendar">
+                <a href="Calendar.svelte">calendar</a><br />
+                <img src="img/calendar.png" alt="calendar"/>
+            </div>
+        </div>
+        <div class="icon-row multi-icons">
+            <div class="icon stats">
+                <a href="Stats.svelte">stats</a><br />
+                <img src="img/stats.png" alt="stats"/>
+            </div>
+            <div class="icon self-help">
+                <a href="Self-help.svelte">self-help</a><br />
+                <img src="img/self-help.png" alt="self help"/>
+            </div>
+        </div>
+    </div>
 </main>
 
 <style>
-	main {
-		padding: 1em;
-		margin: 0 auto;
-	}
+    :global(body) {
+        background-color: #87abab;
+        margin: 0;
+        overflow-x: hidden;
+    }
 
-	h1 {
-		color: rgb(221, 143, 156);
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+    main {
+        padding: 1em;
+        text-align: center; /* Center content */
+    }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-	:global(body) {
-		background-color: #87abab;
-		overflow-x: none;
-	}
+    .cubyconnect {
+        background-color: darkblue;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
 
-	.profile {
-		background-color: dimgray;
-		text-align: center;
-		margin-bottom: 2cm;
-		margin-left: 25%;
-		margin-right: 25%;
-		margin-top: 1.5cm;
-		border-radius: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding: 10px;
-	}
+    .icon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 
-	.calender {
-		background-color: dimgray;
-		text-align: center;
-		padding: 10px;
-		display: inline-block;
-		border-radius: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding: 10px;
-		margin-left: 10%;
-	}
+    .icon-row {
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Make sure this takes up the full width */
+    }
 
-	.events {
-		background-color: dimgray;
-		text-align: center;
-		padding: 10px;
-		display: inline-block;
-		border-radius: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding: 10px;		
-	}
+    .icon-row.multi-icons {
+        justify-content: space-around;
+    }
 
-	.stats {
-		background-color: dimgray;
-		text-align: center;
-		border-radius: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-top: 1cm;
-		display: inline-block;
-		padding: 10px;
-	}
+    .icon {
+        background-color: dimgray;
+        border-radius: 20px;
+        padding: 10px;
+        width: calc(50% - 40px); /* Adjust this to make sure two icons fit in one row */
+        margin: 10px; /* Center and space out icons */
+    }
 
-	.self-help {
-		background-color: dimgray;
-		text-align: center;
-		padding: 10px;
-		display: inline-block;
-		border-radius: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+    .icon img {
+        max-width: 100%; /* Responsive image sizing */
+        height: auto;
+    }
 
-	.cubyconnect {
-		background-color: darkblue;
-	}
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .icon {
+            width: calc(100% - 20px); /* Full width on smaller screens */
+        }
+    }
 
-	img {
-		width: 3.3cm;
-		height: 3.3cm;
-	}
+    @media (max-width: 412px) {
+        .cubyconnect h1 {
+            font-size: 1.5em; /* Adjust font size for small screens */
+        }
+
+        .cubyconnect h2 {
+            font-size: 1.2em; /* Adjust sub-header font size for small screens */
+        }
+    }
 </style>
